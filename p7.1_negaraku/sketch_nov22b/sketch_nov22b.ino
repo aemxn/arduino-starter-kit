@@ -40,13 +40,14 @@
 // Set up speaker on a PWM pin (digital 9, 10 or 11)
 int speakerOut = 9;
 // Do we want debugging on serial out? 1 for yes, 0 for no
-int DEBUG = 1;
+int DEBUG = 0;
 
 void setup() { 
   pinMode(speakerOut, OUTPUT);
   if (DEBUG) { 
-    Serial.begin(9600); // Set serial out if we want debugging
-  } 
+    //Serial.begin(9600); // Set serial out if we want debugging
+  }
+  Serial.begin(9600); // Set serial out if we want debugging
 }
 
 // MELODY and TIMING  =======================================
@@ -75,7 +76,19 @@ int beats[]  = {
   64, 64, 64, 128, 16,
   64, 64, 64, 108, 32, 148
   
-}; 
+};
+
+char* lyrics[] = {
+  "ne", "ga", "ra", "ku", "\n",
+  "ta", "nah ", "tum", "pah", "nya ", "da", "rah", "ku", "\n",
+  "rak", "yat ", "hi", "dup", "\n",
+  "ber", "sa", "tu ", "dan ", "ma", "ju ", "\n",
+  "rah", "mat ", "bah", "gia", "\n",
+  "tu", "han ", "kur", "ni", "a", "kan", "\n",
+  "ra", "ja ", "ki", "ta", "\n",
+  "se", "la", "mat ", "ber", "takh", "ta"
+};
+
 int MAX_COUNT = sizeof(melody) / 2; // Melody length, for looping.
 
 // Set overall tempo
@@ -119,6 +132,7 @@ void playTone() {
 // LET THE WILD RUMPUS BEGIN =============================
 void loop() {
   // Set up a counter to pull from melody[] and beats[]
+  Serial.print(lyrics[0]);
   for (int i=0; i<MAX_COUNT; i++) {
     tone_ = melody[i];
     beat = beats[i];
@@ -139,6 +153,7 @@ void loop() {
       Serial.println(duration);
     }
     
+    Serial.print(lyrics[i+1]);
   }
   exit(0);  
 }
