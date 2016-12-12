@@ -64,17 +64,25 @@ int melody[] = {
   NOTE_B6, NOTE_A6, NOTE_G6, NOTE_F6, 0,
   NOTE_A6, NOTE_G6, NOTE_A6, NOTE_G6, NOTE_F6, NOTE_E6, 0,
   NOTE_D7, NOTE_B6, NOTE_G6, NOTE_A6, 0,
-  NOTE_C7, NOTE_A6, NOTE_AS6, NOTE_B6, NOTE_D7, NOTE_E7 
+  NOTE_C7, NOTE_A6, NOTE_AS6, NOTE_B6, NOTE_CS7, NOTE_C7, 0,
+  NOTE_B6, NOTE_A6, NOTE_G6, NOTE_F6, 0,
+  NOTE_A6, NOTE_G6, NOTE_A6, NOTE_G6, NOTE_F6, NOTE_E6, 0,
+  NOTE_D7, NOTE_B6, NOTE_G6, NOTE_A6, 0,
+  NOTE_C7, NOTE_A6, NOTE_AS6, NOTE_B6, NOTE_D7, NOTE_E7, 0  
 };
 int beats[]  = {
-  64, 64, 64, 128, 16,
-  64, 64, 64, 64, 64, 108, 32, 128, 16,
-  64, 64, 64, 128, 16,
-  64, 64, 64, 108, 32, 138, 16,
-  64, 64, 64, 128, 16,
-  64, 108, 32, 64, 64, 128, 16,
-  64, 64, 64, 128, 16,
-  64, 64, 64, 108, 32, 148
+  64, 64, 64, 128, 12,
+  64, 64, 64, 64, 64, 100, 32, 128, 12,
+  64, 64, 64, 128, 12,
+  64, 64, 64, 100, 32, 138, 12,
+  64, 64, 64, 128, 12,
+  64, 100, 32, 64, 64, 128, 12,
+  64, 64, 64, 128, 12,
+  64, 64, 64, 100, 32, 148, 12,
+  64, 64, 64, 128, 12,
+  64, 100, 32, 64, 64, 128, 12,
+  64, 64, 64, 128, 12,
+  64, 64, 64, 100, 32, 148  
   
 };
 
@@ -86,7 +94,11 @@ char* lyrics[] = {
   "rah", "mat ", "bah", "gia", "\n",
   "tu", "han ", "kur", "ni", "a", "kan", "\n",
   "ra", "ja ", "ki", "ta", "\n",
-  "se", "la", "mat ", "ber", "takh", "ta"
+  "se", "la", "mat ", "ber", "takh", "ta", "\n",
+  "rah", "mat ", "bah", "gia", "\n",
+  "tu", "han ", "kur", "ni", "a", "kan", "\n",
+  "ra", "ja ", "ki", "ta", "\n",
+  "se", "la", "mat ", "ber", "takh", "ta", "\n"  
 };
 
 int MAX_COUNT = sizeof(melody) / 2; // Melody length, for looping.
