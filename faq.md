@@ -9,3 +9,5 @@
 4. How much voltage and ampere does Uno R3 accepts?
 
 5. WHat is positive-central 2.1mm barrel plug means?
+
+6. Logic levels - logic high, logic low? What the fuck is that?
