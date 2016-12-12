@@ -6,6 +6,8 @@
 
 3. Best practice for jumper wires management?
 
+4. How does the circuit board electric current flows? Horizontally, vertically? How does the PCB board work then?
+
 4. How much voltage and ampere does Uno R3 accepts?
 
 5. WHat is positive-central 2.1mm barrel plug means?
