@@ -54,35 +54,33 @@ void setup() {
 //  melody[] is an array of notes, accompanied by beats[], 
 //  which sets each note's relative length (higher #, longer note) 
 
-// Negaraku Melody
+// Birthday Melody
 
 int melody[] = {
-  NOTE_D3, NOTE_D3, NOTE_E3, NOTE_D3, NOTE_F3, NOTE_G5, 0
+  NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, NOTE_C3, NOTE_B3, 0,
+  NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, NOTE_D3, NOTE_C3, 0,
+  NOTE_G3, NOTE_G3, NOTE_G3, NOTE_E3, NOTE_C3, NOTE_B3, NOTE_A3, 0,
+  NOTE_F3, NOTE_F3, NOTE_E3, NOTE_C3, NOTE_D3, NOTE_C3, 0
 };
 int beats[]  = {
-  32, 16, 64, 64, 64, 128, 32
-  
+  32, 16, 42, 42, 42, 128, 28,
+  32, 16, 42, 42, 42, 128, 28,
+  32, 16, 42, 42, 42, 42, 42, 32,
+  32, 16, 42, 42, 42, 128, 28
 };
 
 char* lyrics[] = {
-  "ne", "ga", "ra", "ku", "\n",
-  "ta", "nah ", "tum", "pah", "nya ", "da", "rah", "ku", "\n",
-  "rak", "yat ", "hi", "dup", "\n",
-  "ber", "sa", "tu ", "dan ", "ma", "ju ", "\n",
-  "rah", "mat ", "bah", "gia", "\n",
-  "tu", "han ", "kur", "ni", "a", "kan", "\n",
-  "ra", "ja ", "ki", "ta", "\n",
-  "se", "la", "mat ", "ber", "takh", "ta", "\n",
-  "rah", "mat ", "bah", "gia", "\n",
-  "tu", "han ", "kur", "ni", "a", "kan", "\n",
-  "ra", "ja ", "ki", "ta", "\n",
-  "se", "la", "mat ", "ber", "takh", "ta", "\n"  
+  "ha", "ppy ", "birth", "day ", "to ", "you", "\n",
+  "ha", "ppy ", "birth", "day ", "to ", "you", "\n",
+  "ha", "ppy ", "birth", "day ", "to ", "Nabila", "\n",
+  "ha", "ppy ", "birth", "day ", "to ", "you!", "\n",
 };
 
 int MAX_COUNT = sizeof(melody) / 2; // Melody length, for looping.
 
 // Set overall tempo
-long tempo = 10000;
+//long tempo = 10000;
+long tempo = 11000;
 // Set length of pause between notes
 int pause = 1000;
 // Loop variable to increase Rest length
